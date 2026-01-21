@@ -1,0 +1,5 @@
+com\adrian\expense_tracker\ExpenseController.class
+com\adrian\expense_tracker\ExpenseTrackerApplication.class
+com\adrian\expense_tracker\Expense.class
+com\adrian\expense_tracker\ExpenseRepository.class
+com\adrian\expense_tracker\ExpenseService.class

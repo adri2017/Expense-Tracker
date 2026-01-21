@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+    <div class="card">
+      <form id="expenseForm">
+        <div class="grid">
+          <div>
+            <label for="title">Título</label>
+            <input id="title" required maxlength="120" placeholder="Ej: Cena, Gasolina..." />
+          </div>
+
+          <div>
+            <label for="amount">Importe (€)</label>
+            <input id="amount" type="number" required min="0.01" step="0.01" placeholder="Ej: 12.50" />
+          </div>
+
+          <div>
+            <label for="category">Categoría</label>
+            <input id="category" required maxlength="60" placeholder="Ej: Comida, Transporte..." />
+          </div>
+
+          <div>
+            <label for="expenseDate">Fecha</label>
+            <input id="expenseDate" type="date" required />
+          </div>
+
+          <div style="grid-column: 1 / -1;">
+            <label for="notes">Notas (opcional)</label>
+            <input id="notes" maxlength="255" placeholder="Ej: con amigos, ticket #..." />
+          </div>
+        </div>
+
+        <div class="row">
+          <button class="btn primary" type="submit">Añadir gasto</button>
+
+          <div>
+            <span class="muted">Total (filtro): </span>
+            <span class="total" id="total">0,00 €</span>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <div class="row" style="margin-top:0;">
+        <div>
+          <label for="monthFilter" style="margin:0 0 6px;">Filtrar por mes</label>
+          <input id="monthFilter" type="month" />
+        </div>
+
+        <button class="btn" id="clearMonth" type="button">Quitar filtro</button>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Concepto</th>
+            <th>Categoría</th>
+            <th>Fecha</th>
+            <th>Importe</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

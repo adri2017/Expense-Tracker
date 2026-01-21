@@ -1,0 +1,128 @@
+* { box-sizing: border-box; }
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#0f1115;
+  color:#fff;
+}
+
+.container{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 18px;
+}
+
+h1{
+  margin: 0 0 18px;
+  font-size: 28px;
+}
+
+.card{
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.35);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 720px){
+  .grid{ grid-template-columns: 1fr; }
+}
+
+label{
+  display:block;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: rgba(255,255,255,0.85);
+}
+
+input, select{
+  width:100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.18);
+  color:#fff;
+  outline:none;
+}
+
+input:focus, select:focus{
+  border-color: rgba(59,130,246,0.55);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.14);
+}
+
+.row{
+  display:flex;
+  gap: 10px;
+  align-items:center;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+.btn{
+  cursor:pointer;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 900;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.92);
+  transition: .2s;
+}
+
+.btn:hover{ background: rgba(255,255,255,0.10); transform: translateY(-1px); }
+.btn.primary{
+  background: rgba(59,130,246,0.22);
+  border-color: rgba(59,130,246,0.35);
+}
+.btn.danger{
+  background: rgba(239,68,68,0.16);
+  border-color: rgba(239,68,68,0.28);
+}
+
+.table{
+  margin-top: 14px;
+  width:100%;
+  border-collapse: collapse;
+  overflow:hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.table th, .table td{
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  text-align:left;
+  vertical-align: top;
+}
+
+.table th{
+  color: rgba(255,255,255,0.72);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 900;
+  background: rgba(255,255,255,0.04);
+}
+
+.muted{ color: rgba(255,255,255,0.70); }
+.badge{
+  display:inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+}
+
+.total{
+  font-size: 18px;
+  font-weight: 900;
+}
